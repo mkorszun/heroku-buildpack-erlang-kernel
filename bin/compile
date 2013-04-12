@@ -18,8 +18,8 @@ ver=${OTP_VERSION:=${DEFAULT_OTP_VERSION}}
 tarball=${ver}.tgz
 OTP_TARBALL_URL="https://s3.amazonaws.com/heroku-buildpack-erlang/${tarball}"
 ERLROOT=${build}/otp
-OTP_DIR=${HOME}/otp
-PROFILE=${HOME}/.profile.d
+OTP_DIR=${HOME}/www/otp
+PROFILE=${HOME}/www/.profile.d
 
 echo "-----> Using Erlang/OTP $ver"
 
