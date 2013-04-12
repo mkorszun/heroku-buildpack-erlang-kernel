@@ -39,7 +39,6 @@ echo "-------> Unpacking Erlang/OTP $ver"
 mkdir -p ${ERLROOT}
 tar zxf ${cache}/${tarball} -C ${ERLROOT} --strip-components=2
 echo "-------> Installing Erlang/OTP $ver"
-mkdir -p ${OTP_DIR}
 ln -s ${ERLROOT} ${OTP_DIR}
 ${ERLROOT}/Install -minimal ${OTP_DIR}
 
@@ -60,7 +59,7 @@ if [ ${PIPESTATUS[0]} -ne 0 ]; then
   exit 1
 fi
 
-mkdir ${PROFILE}
+mkdir -p ${PROFILE}
 cp ${bpdir}/opt/otp.sh ${PROFILE}
 
 echo "-----> Build succeeded"
